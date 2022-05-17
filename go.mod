@@ -1,4 +1,4 @@
-module github.com/crossplane-contrib/provider-jet-template
+module github.com/crossplane-contrib/provider-jet-neo4j
 
 go 1.17
 

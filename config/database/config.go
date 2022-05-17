@@ -1,0 +1,13 @@
+package database
+
+import "github.com/crossplane/terrajet/pkg/config"
+
+// Configure configures individual resources by adding custom ResourceConfigurators.
+func Configure(p *config.Provider) {
+	p.AddResourceConfigurator("neo4j_database", func(r *config.Resource) {
+
+		// we need to override the default group that terrajet generated for
+		// this resource, which would be "github"
+		r.ShortGroup = "database"
+	})
+}

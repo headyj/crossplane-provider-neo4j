@@ -1,16 +1,16 @@
 # ====================================================================================
 # Setup Project
 
-PROJECT_NAME := provider-jet-template
+PROJECT_NAME := provider-jet-neo4j
 PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION := 1.1.6
 
-export TERRAFORM_PROVIDER_SOURCE := hashicorp/null
-export TERRAFORM_PROVIDER_VERSION := 3.1.0
-export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-null
-export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://releases.hashicorp.com/terraform-provider-null/3.1.0
-export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-null_v3.1.0_x5
+export TERRAFORM_PROVIDER_SOURCE := headyj/neo4j
+export TERRAFORM_PROVIDER_VERSION := 0.2.3
+export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-neo4j
+export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://github.com/headyj/terraform-provider-neo4j/releases/download/v0.2.3
+export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-neo4j_v0.2.3_x5
 
 PLATFORMS ?= linux_amd64 linux_arm64
 
@@ -52,7 +52,7 @@ GO111MODULE = on
 # Setup Images
 
 DOCKER_REGISTRY ?= crossplane
-IMAGES = provider-jet-template provider-jet-template-controller
+IMAGES = provider-jet-neo4j provider-jet-neo4j-controller
 -include build/makelib/image.mk
 
 # ====================================================================================
